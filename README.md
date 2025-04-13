@@ -1,11 +1,8 @@
-BookBazar - Online Bookstore Platform
-📖 Project Overview
+**BookBazar - Online Bookstore Platform**
+**📖 Project Overview**
 BookBazar is a modern online bookstore built using a microservices architecture, combining MVC (Model-View-Controller) for the frontend and Web API for backend services. The system is designed for scalability, maintainability, and high performance, with each service handling a specific business domain.
 
-🔗 GitHub Repository
-📌 BookBazar GitHub Repo (Replace with your actual repo link)
-
-🚀 Key Features
+**🚀 Key Features**
 ✅ Microservices Architecture – Decoupled services for better scalability and maintainability
 ✅ User Authentication & Authorization – JWT-based secure login/registration
 ✅ Book Catalog & Search – Browse, filter, and search books
@@ -13,7 +10,7 @@ BookBazar is a modern online bookstore built using a microservices architecture,
 ✅ Order Management – Track orders, view history, and manage payments
 ✅ Admin Dashboard – Manage books, users, and orders
 
-🛠️ Technology Stack
+**🛠️ Technology Stack**
 🔹 Backend (Web API - Microservices)
 ASP.NET Core Web API (RESTful endpoints)
 
@@ -31,7 +28,7 @@ Redis (Caching for performance)
 
 Swagger / OpenAPI (API Documentation)
 
-🔹 Frontend (MVC - User Interface)
+**🔹 Frontend (MVC - User Interface)**
 ASP.NET Core MVC (Server-side rendering)
 
 Bootstrap 5 (Responsive UI)
@@ -40,14 +37,14 @@ JavaScript / jQuery (Dynamic interactions)
 
 Razor Pages (Templating engine)
 
-🔹 DevOps & Deployment
+**🔹 DevOps & Deployment**
 Docker & Docker Compose (Container orchestration)
 
 GitHub Actions / Azure DevOps (CI/CD Pipelines)
 
 Azure App Service / AWS ECS (Cloud deployment)
 
-📂 Microservices Breakdown
+**📂 Microservices Breakdown**
 Service	Description	Tech Used
 Identity Service	User authentication (JWT), registration, roles	ASP.NET Core, JWT, Identity
 Book Catalog	Book listings, search, filtering	EF Core, Caching, Web API
@@ -100,7 +97,7 @@ GitHub Issues: Report bugs or feature requests
 
 Pull Requests: Contributions welcome!
 
-Author: Your Name
+**Author: Jayabrat Das**
 
 🌟 Why BookBazar?
 ✔ Scalable – Microservices allow independent scaling
