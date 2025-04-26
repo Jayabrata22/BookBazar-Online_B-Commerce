@@ -24,7 +24,7 @@ namespace IdentityService_API.Service
             this.httpClient = httpClient;
         }
 
-        public async Task<string> GenerateJwtToken(Identity user)
+        public string GenerateJwtToken(Identity user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_config["Jwt:Key"]);
@@ -44,7 +44,7 @@ namespace IdentityService_API.Service
             return tokenHandler.WriteToken(token);
         }
 
-        public async Task<string> RegisterAsync(RegisterDTO dto)
+        public async Task<string?> RegisterAsync(RegisterDTO dto)
         {
             var user = new Identity { UserName = dto.Username, FullName = dto.FullName };
             var result = await _userManager.CreateAsync(user, dto.Password);
@@ -58,14 +58,14 @@ namespace IdentityService_API.Service
                 fullName = dto.FullName
             };
             var response = await httpClient.PostAsJsonAsync(" https://localhost:7232/api/user", userProfile);
-            return result.Succeeded ? await GenerateJwtToken(user) : null;
+            return result.Succeeded ? GenerateJwtToken(user) : null;
         }
 
         public async Task<string> LoginAsync(LoginDTO dto)
         {
             var user = await _userManager.FindByNameAsync(dto.Username);
             if (user == null || !(await _userManager.CheckPasswordAsync(user, dto.Password))) return null;
-            return await GenerateJwtToken(user);
+            return GenerateJwtToken(user);
         }
     }
 }

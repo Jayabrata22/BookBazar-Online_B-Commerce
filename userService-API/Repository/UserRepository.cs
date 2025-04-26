@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
 using userService_API.DBContext;
 using userService_API.Interfaces;
 using userService_API.models;
@@ -19,14 +20,34 @@ namespace userService_API.Repository
             await _context.SaveChangesAsync();
         }
 
-        public Task<IEnumerable<UserProfile>> GetAllAsync()
+        public async Task<IEnumerable<UserProfile>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _context.UserProfiles.ToListAsync();
         }
 
-        public Task<UserProfile> GetByIdAsync(int id)
+        public async Task<UserProfile> GetByIdAsync(string id)
         {
-            throw new NotImplementedException();
+            var user = await _context.UserProfiles.FindAsync(id);
+            if(user != null)
+            {
+                return user;
+            }
+            return null;
         }
+
+        public Task UpdateUserdetailsAsync(UserProfile user)
+        {
+           var userProfile = _context.UserProfiles.FirstOrDefault(u => u.Id == user.Id);
+            if (userProfile != null)
+            {
+                userProfile.FullName = user.FullName;
+                userProfile.Email = user.Email;
+                userProfile.PhoneNumber = user.PhoneNumber;
+                userProfile.Address = user.Address;
+                userProfile.ProfilePicture = user.ProfilePicture;
+            }
+            return _context.SaveChangesAsync();
+        }
+
     }
 }

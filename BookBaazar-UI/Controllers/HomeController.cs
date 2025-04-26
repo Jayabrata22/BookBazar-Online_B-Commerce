@@ -23,6 +23,16 @@ namespace BookBaazar_UI.Controllers
             return View();
         }
 
+        public IActionResult Login()
+        {
+            return RedirectToAction("Index" ,"Auth");
+        }
+
+        public IActionResult Register()
+        {
+            return RedirectToAction("Register", "Auth");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

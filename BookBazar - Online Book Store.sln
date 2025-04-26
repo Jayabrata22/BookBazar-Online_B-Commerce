@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BookService", "BookService", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserService", "UserService", "{E33832E4-AC18-42EB-A7BC-9D2B54B9B665}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CartService", "CartService", "{6A52092B-ACCF-4983-8A35-D723FEEC5FEC}"
@@ -27,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway-API", "Gateway-API"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityService-API", "IdentityService-API\IdentityService-API.csproj", "{EFC5179C-5721-4399-BF09-3C94D50052C5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BookService", "BookService", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookService-API", "BookService-API\BookService-API.csproj", "{6786B0D6-8D83-4F73-8133-ADAF32120E86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{EFC5179C-5721-4399-BF09-3C94D50052C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFC5179C-5721-4399-BF09-3C94D50052C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFC5179C-5721-4399-BF09-3C94D50052C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6786B0D6-8D83-4F73-8133-ADAF32120E86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6786B0D6-8D83-4F73-8133-ADAF32120E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6786B0D6-8D83-4F73-8133-ADAF32120E86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6786B0D6-8D83-4F73-8133-ADAF32120E86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{D54CE391-8619-4581-9A7A-F4D0076FA829} = {B0992736-B86F-44C3-A9F7-03397F333917}
 		{72678114-6F10-4341-A7D7-C185A1540E68} = {E33832E4-AC18-42EB-A7BC-9D2B54B9B665}
 		{EFC5179C-5721-4399-BF09-3C94D50052C5} = {47920B30-0199-4F82-8F76-F49D3A62DC58}
+		{6786B0D6-8D83-4F73-8133-ADAF32120E86} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AEF6225B-E21B-4097-9FE3-B2DA3A1E9F5E}

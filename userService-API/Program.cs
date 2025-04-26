@@ -58,10 +58,10 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapGet("/weatherforecast", () =>
-{
-})
-.WithName("GetWeatherForecast");
+//app.MapGet("/weatherforecast", () =>
+//{
+//})
+//.WithName("GetWeatherForecast");
 
 app.Run();
 
